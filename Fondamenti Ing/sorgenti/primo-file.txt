@@ -12,7 +12,7 @@ fine
 
 funzione maggiore(numero1, numero2)
     //verifico quale dei due numeri è più grande
-       se numero1 > numero2
+    se numero1 > numero2
     allora
         risultato = numero 1
     altrimenti
