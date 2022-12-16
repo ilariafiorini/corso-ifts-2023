@@ -1,0 +1,9 @@
+Specifica di progetto: -> Scrivere una funzione chiamata somma che riceve in input due numeri interi e produce in output la somma dei due
+
+funzione somma(numero1, numero2)
+    //calcolo il risultato
+    risultato = numero1 + numero2
+
+    //restituisco il risultato
+    restituisci risultato
+fine
