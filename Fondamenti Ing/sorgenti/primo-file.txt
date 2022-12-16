@@ -1,9 +1,23 @@
-Specifica di progetto: -> Scrivere una funzione chiamata somma che riceve in input due numeri interi e produce in output la somma dei due
+//Specifica di progetto: -> Scrivere una funzione chiamata somma che riceve in input due numeri interi e produce in output la somma dei due
 
 funzione somma(numero1, numero2)
     //calcolo il risultato
     risultato = numero1 + numero2
 
+    //restituisco il risultato
+    restituisci risultato
+fine
+
+//Specifica di progetto: -> Scrivere la funzione maggiore che riceve due numeri e restituisce il più grande
+
+funzione maggiore(numero1, numero2)
+    //verifico quale dei due numeri è più grande
+        se numero1 > numero2
+    allora
+        risultato = numero 1
+    altrimenti
+        risultato = numero 2
+    end
     //restituisco il risultato
     restituisci risultato
 fine
