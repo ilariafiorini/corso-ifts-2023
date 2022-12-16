@@ -12,12 +12,27 @@ fine
 
 funzione maggiore(numero1, numero2)
     //verifico quale dei due numeri è più grande
-        se numero1 > numero2
+       se numero1 > numero2
     allora
         risultato = numero 1
     altrimenti
         risultato = numero 2
-    end
+    fine se
     //restituisco il risultato
     restituisci risultato
 fine
+
+//Specifica di progetto: -> Scrivere la funzione controllo che riceve due  nuumeri e restituisce "uguali" se sono uguali, "diversi" se sono diversi
+
+funzione controllo(numero1, numero2)
+    //verifico se i due numeri sono uguali
+    se numero1 = numero2
+    allora
+        risultato = "uguali"
+    altrimenti
+        risulatato = "diversi"
+    fine se
+    //restituisco il risultato
+    restituisci risultato
+fine
+
