@@ -1,0 +1,11 @@
+DNS Domain Name System  www.xxx.xxx
+IP Internet Protocol    IP: aaa.bbb.ccc.ddd
+
+i DNS server sono server che mantengono le tabelle di associazione tra nomi di dominio e indirizzi IP associati
+i DNS Server sono ridondanti e collegati insieme ma non tutti gli accoppiamenti sono contenuti in ogni tabella di ogni server, ma il protocollo di interconessione tra i vari server DNS sa come propagare la richiesta di associazione
+Browser <- nome a dominio <- UTENTE
+DNS server <- nome a dominio <- Browser
+Browser <- IP Server WEB <- DNS server
+Server WEB <- pagina.html <- Browser
+Browser <- <html> ... </html> <- Server WEB
+Utente <- rendering grafico <- Browser
