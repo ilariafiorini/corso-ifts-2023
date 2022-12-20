@@ -3,9 +3,29 @@ IP Internet Protocol    IP: aaa.bbb.ccc.ddd
 
 i DNS server sono server che mantengono le tabelle di associazione tra nomi di dominio e indirizzi IP associati
 i DNS Server sono ridondanti e collegati insieme ma non tutti gli accoppiamenti sono contenuti in ogni tabella di ogni server, ma il protocollo di interconessione tra i vari server DNS sa come propagare la richiesta di associazione
+
 Browser <- nome a dominio <- UTENTE
 DNS server <- nome a dominio <- Browser
 Browser <- IP Server WEB <- DNS server
-Server WEB <- pagina.html <- Browser
+server WEB <- ip server web <- Browser
+Browser <- index.html <- Server WEB
+
+Browser <- nome a dominio/pagina.html <- UTENTE
+Server WEB <- nome a dominio/pagina.html <- Browser
+DNS server <- nome a dominio <- Browser
+Browser <- IP Server WEB <- DNS server
+server WEB <- ip server web/pagina.html <- Browser
 Browser <- <html> ... </html> <- Server WEB
 Utente <- rendering grafico <- Browser
+
+Il codice PHP è interpretato lato Server
+    se sul browser compare del codice PHP è successo qualcosa di sbagliato lato server
+
+noi scriveremo dei file con estensione .php che saranno interpretati  lato server e genereranno la pagina HTML che sarà inviata al browser per essere visualizzata dall'utente
+
+localhost: il nome di dominio della macchina locale
+
+Server web Windows              WAMP Win   Apache Mysql PHP
+Server web Apple                MAMP Mac   Apache Mysql PHP
+Server web Linux                LAMP Linux Apache Mysql PHP
+Server web multipiattaforma     XAMP S.O.  Apache Mysql PHP
