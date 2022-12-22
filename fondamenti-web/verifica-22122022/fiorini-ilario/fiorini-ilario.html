@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica HTML</title>
+</head>
+<body>
+    <header>
+        <hgroup>
+            <h1>HTML5 (h1)</h1>
+            <h2>Verifica Tag e Form</h2>
+        </hgroup>
+    </header>
+    <h2 id="sommario">Sommario (h2)</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href="#sommario" title="Sommario">Sommario</a>
+            </li>
+            <li>
+                <a href="#tabella" title="Tabella">Tabella</a>
+            </li>
+            <li>
+                <a href="#form" title="Form">Form</a>
+            </li>
+            <li>
+                <a href="#ht5TagSem" title="HTML5 Tag Semantici">HTML5 Tag Semantici</a> 
+            </li>
+        </ul>
+    </nav>
+    <hr>
+    <main>
+        <section id="tabella">
+            <h2>Sezione 1: Tabella(h2)</h2>
+            <table style="width: 100%">
+                <caption><h3>La tabella Nutrizionale (3)</h3></caption>
+                <thead style="background-color: orangered;">
+                    <th>Valori medi</th>
+                    <th>Per 100g</th>
+                    <th>Per porzione (8,7g)</th>
+                    <th>Dettagli</th>
+                </thead>
+                <tbody>
+                    <tr style="background-color: lightgrey;">
+                        <td><b>Valore energetico</b></td>
+                        <td>1191 kj<br>474 kcal</td>
+                        <td>173 kj<br>41 kcal</td>
+                        <td rowspan="3">Sezione 1</td>
+                    </tr>
+                    <tr>
+                        <td>Grassi<br>di cui acidi saturi</td>
+                        <td>18 g<br>8,8 g</td>
+                        <td>1,6 g<br>0,8 g</td>                        
+                    </tr>
+                    <tr style="background-color: lightgray;">
+                        <td>Carboidrati<br>di cui zuccheri</td>
+                        <td>70 g<br>23,5 g</td>
+                        <td>6,1 g<br>2,0 g</td>                        
+                    </tr>
+                    <tr>
+                        <td>Proteine</td>
+                        <td>7 g</td>
+                        <td>6,6 g</td>
+                        <td rowspan="2">Sezione 2</td>
+                    </tr>
+                    <tr style="background-color: lightgray;">
+                        <td>Sale</td>
+                        <td>0,270 g</td>
+                        <td>0,023 g</td>
+                    </tr>
+                   
+                    
+                </tbody>
+                <tfoot>
+                    <tr style="background-color: aqua;">
+                        <td colspan="2">
+                            <img src="./immagini/facebook-logo.png" alt="logoFB">
+                            <a href="https://facebook.com/sararossinutrizionista">facebook.com/sararossininutrizionista</a>
+                        </td>
+                        <td colspan="2">
+                            <a href="mailto: sararossinutrizionista.it">sararossinutrizionista.it</a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: aqua;">
+                        <td colspan="4"><i>&copy; Dottoressa Nutrizionista Sara Rossi</i></td>
+                    </tr>
+
+                </tfoot>
+            </table>
+        </section>
+        
+        <section id="form">
+            <h2>Sezione 2: Form(h2)</h2>
+            <form action="inviaDati.php" method="GET">
+                <fieldset>
+                    <legend>Dati Anagrafici</legend>
+                    <label for="txtCognome">Cognome:</label>
+                    <input type="text" name="txtCognome" id="txtCognome" placeholder="imp-cognome">
+                    <label for="txtNome">Nome:</label>
+                    <input type="text" name="txtNome" id="txtNome" placeholder="imp-nome">
+                   
+                </fieldset>
+                <fieldset>
+                    <legend>Dati Residenza</legend>
+                    <label for="txtIndirizzzo">Indirizzo:</label>
+                    <input type="text" name="txtIndirizzo" id="txtIndirizzo">
+                    <label for="txtCap">Cap::</label>
+                    <input type="text" name="txtCap" id="txtCap">
+                    <label for="txtLocalita">Località:</label>
+                    <input type="text" name="txtLocalita" id="txtLocalita">
+                    <label for="txtProvincia">Provincia:</label>
+                    <input type="text" name="txtProvincia" id="txtProvincia">
+                    <label for="selStato">Stato:</label>
+                    <select name="selectStato" id="selStato">
+                        <optgroup label="Europa">                            
+                            <option value="italia">Italia</option>
+                            <option value="francia">Francia</option>
+                            <option value="germania">Germania</option>
+                        </optgroup>
+                        <optgroup label="Asia">                            
+                            <option value="cina">Cina</option>
+                            <option value="tahilandia">Tahilandia</option>
+                            <option value="giappone">Giappone</option>
+                        </optgroup>
+                    </select>
+                    
+                </fieldset>
+                <fieldset>
+                    <legend>Dati Contatto</legend>
+                    <label for="emailContatto">Email:</label>
+                    <input type="email" name="emailContatto" id="emailContatto" required>
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" name="telefono" id="telefono" >
+                   
+                </fieldset>
+                <fieldset>
+                    <legend>Dati Accesso</legend>
+                    <label for="emailAccesso">Email:</label>
+                    <input type="email" name="emailAccesso" id="emailAccesso" required>
+                    <label for="password">Password:</label>
+                    <input type="text" name="Password" id="Password" >
+                    <label for="confPassword">Conferma Password:</label>
+                    <input type="text" name="confPassword" id="confPassword" >
+                    
+                </fieldset>
+                <fieldset>
+                    ><legend> Dati Personali</legend>
+                    <label for="meseAnno">Mese + Anno Attuale:</label>
+                    <input type="month" name="meseAnno" id="meseAnno">
+                    <label for="colore">Colore Preferito:</label>
+                    <input type="color" name="colore" id="colore" >
+                    <label for="eta">Età:</label>
+                    <input type="number" name="eta" id="eta" min="18" max="99" step="1" >
+                    <label for="sitoWeb">Blog Personale (url):</label>
+                    <input type="url" name="sitoWeb" id="sitoWeb" >
+                </fieldset>
+                
+                <fieldset>
+                    ><legend> Dati Gradimento</legend>
+                    <label for="voto">MVoto:</label>
+                    <input type="range" name="voto" id="voto" min="1" max="10">
+                    <label for="sport">Sport Preferito:</label>
+                    <input list="sport" id="sport" name="sport">
+                        <datalist id="sport">
+                            <option value="Calcio">
+                            <option value="Tennis">
+                            <option value="Basket">
+                            <option value="Nuoto">
+                        </datalist>
+
+
+                    <label for="commento">Commento:</label>
+                    <textarea rows="5" cols="50" id="commento" name="commento"></textarea>
+                </fieldset>    
+                <section id="pulsanti">
+                    <button type="submit">Invia</button>
+                </section>
+            </form>
+            
+        </section>
+
+        <section id="ht5TagSem">
+
+            <h2>Sezione 3: Html5 Tag(h2)</h2>
+            <article>
+                <header>
+                    <h3>SOCIAL MEDIA E WEB MARKETING MANAGER</h3>
+
+                </header>
+                <main>
+                    <b>La risosrsa ricercata si occuperà in completa autonomia di: Gestione del Sito Web e dei Socia Network aziendale (LInkedIn, Facebook, Twitter). Creazione di contenuti web di testo in ottica SEO. Gestione della comunicazione associativa ed organizzativa(Newsletter, email, inviti, ecc.). Potrebbero interessarti HTTP://www.romatoday.it/annunci/social-media-e-web-marketing.manager-3hkbl.job. Seguici su Facebook: http://www.facebook.com/pages/RomaToday/41916963809</b>
+                </main>
+                <footer>
+                    <details>
+                        <summary>Approfondimenti</summary>
+                        <pl>
+                            <li>
+                                <a href="#sommario" title="Sommario">Sommario</a>
+                            </li>
+                            <li>
+                                <a href="#tabella" title="Tabella">Tabella</a>
+                            </li>
+                        </pl>
+                    </details>
+
+                </footer>
+            </article>
+        
+           
+        </section>
+    </main>
+</body>
+<footer>
+    <p>Autore: Ilaria Fiorini</p>
+</footer>
+</html>
