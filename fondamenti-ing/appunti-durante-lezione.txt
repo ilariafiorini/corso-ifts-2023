@@ -1,0 +1,6 @@
+Appunti sparsi
+
+Linguaggio concorrente: ADA
+Marco Prandini
+
+Cpu Z analizza le specifiche dell'hw del computer ed evidenzia, per esempio le differenze di velogità tra cpu e ram
