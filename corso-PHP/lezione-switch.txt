@@ -33,3 +33,31 @@ Sempre cercare nel manuale!!! https://www.php.net/manual
 // PEr casa: quanti giorni mancano al mio compleanno?
 //
 // compiti 
+
+
+
+///////
+// CICLI
+////
+
+//$i:iterazioni
+//    |$i=1 : inizializzazione
+//    |       | $i<=5  condizione per la continuazione del ciclo
+//    |       |       | $i++  istruzione eseguita a fine iterazione
+//    |       |       |
+for ( $i=1 ; $i<=5 ; $i++ ){
+    echo "<br> $i ciao";
+    ...
+
+}echo $i // $i vale 6
+
+// NB con break posso forzare l'uscita dal ciclo
+// NB con continue termino l'iterazione corrente del ciclo e inzio la prossima iterazione del ciclo
+
+
+// compiti 2 (dopo la prox lezione)
+//
+// tavola pitagorica con i cicli innestati
+//
+// compiti
+
