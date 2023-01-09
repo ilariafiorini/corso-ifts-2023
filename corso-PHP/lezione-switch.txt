@@ -1,0 +1,35 @@
+l'operatore switch valuta l0uguaglianza della variabile analizzata rispeto alle varie ipotesi (case)
+il blocco di istruzioni dopo il case può raggruppare più istruzioni eseguite in condizione, senza essere raggruppati con le graffe
+il case di default è sempre vero e quindi se non viene saltato coi break nei vari casi viene valutato ed eseguito
+più "case" con la stessa conseguenza possono essere raggruppati
+
+switch ($m){
+    case 1 : $g = 31; ... ; break;
+    case 2 : $g = 28;
+    ...
+    case default: .....
+}
+
+
+
+switch ($m){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12: $g = 31;  ; echo"giorni = $g"  break;
+    case 2 : $g = 28;
+    case default: $g= 30;
+}
+
+
+Sempre cercare nel manuale!!! https://www.php.net/manual
+
+
+// compiti 1
+//
+// PEr casa: quanti giorni mancano al mio compleanno?
+//
+// compiti 
