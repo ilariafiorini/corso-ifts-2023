@@ -4,3 +4,17 @@ terza riga di appunti sparsi
 
 
 w3c school https://www.w3schools.com/php/
+
+
+ PAth di PHP in win
+"C:\xampp\php\php.exe"
+
+
+
+configurazione VS Code per PHP
+
+"php.validate.executablePath": "C:\\xampp\\php\\php.exe",
+
+
+
+"php.validate.run": "onType",
