@@ -1,0 +1,68 @@
+/* style.css */
+/* questo è un commento*/
+/* mobile first*/
+div{
+    margin: 10px;
+}
+h2{
+    font-size: 24px;
+    color:red;
+}
+/*....*/
+h2{
+    color: blue;
+}
+h2{
+    color:black;
+}
+h3{
+    text-decoration: underline;
+    color: orange;
+}
+
+section{
+    font-size: 20px;
+}
+
+span{
+    color:gray;
+}
+
+a{
+    color:blueviolet;
+}
+
+a.menu, div.primopiano, h3{
+    color:orange !important;
+}
+
+a#home{
+    font-size: 1.5em;
+}
+
+
+@media screen and (min-width:576px){
+    /* tablet + smarthone grandi */
+    h2{
+        color:aqua;
+    }
+    
+}
+@media screen and (min-width:768px){
+    /* tablet + notebook piccoli */
+    h2{
+        color:chartreuse;
+    }
+    
+}
+@media screen and (min-width:992px){
+    /* notebook  desktop */
+    h2{
+        color:deeppink;
+    }
+    h3{
+        text-decoration: none;
+    }
+    
+}
+

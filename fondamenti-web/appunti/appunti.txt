@@ -1,0 +1,4 @@
+Manuale bootstrap 
+(riferimento per dimensioni e altri standard di periferiche che utilizziamo anche in css)
+Media Queries breackpoints
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
