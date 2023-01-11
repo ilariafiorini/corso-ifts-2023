@@ -1,6 +1,9 @@
 /* style.css */
 /* questo è un commento*/
 /* mobile first*/
+*{
+    margin-left: 20px;
+}
 div{
     margin: 10px;
 }
@@ -32,12 +35,18 @@ a{
     color:blueviolet;
 }
 
-a.menu, div.primopiano, h3{
+div.primopiano, h3{
     color:orange !important;
 }
 
-a#home{
+ul#menu a{
+    /* discendenza */
+    color: orangered;
+}
+
+ul#menu a#home{
     font-size: 1.5em;
+    color: blueviolet;
 }
 
 
