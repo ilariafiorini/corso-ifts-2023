@@ -1,0 +1,6 @@
+table tr:nth-child(2n+1){
+    background-color: aqua;
+}
+table first-child{
+    background-color: orange;
+}

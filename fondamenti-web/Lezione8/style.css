@@ -110,3 +110,35 @@ section#pseudo-classi-strutturali :last-child{
     border-radius: 3px;
     padding: 5px;
 }
+span:not(-evidenza){
+    background-color: deeppink;
+    color:white;
+    padding: 5px;
+}
+input:enabled{
+    border: 1px solid blue;
+}
+input:disabled{
+    border: 1px solid darkgreen;
+    display: none;
+}
+input:disabled + label{
+    border: 1px solid darkgreen;
+    display: none;
+}
+input:checked{
+    margin-left: 15px;
+    accent-color: red;
+}
+/*pseudo elementi */
+#editoriale p::first-letter{
+    font-size: 5em;
+    
+}
+#editoriale p::first-line{
+    color: goldenrod;
+}
+input:checked::before{
+
+    content: "(selezionato"
+}
