@@ -1,0 +1,80 @@
+/* nulla */
+body{
+    margin: 0;
+}
+section#articoli{
+    display: flex;
+    flex-direction: column;
+}
+section#articoli div {
+    width: 33%;
+    height: 80px;
+    /*border: 2px dashed darkolivegreen;*/
+    border-width: 5px;
+    /* border-color: olivedrab; */
+    border-style: inset;
+    /* border-top-color: red;
+    border-bottom-color: cadetblue; */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 30px;
+    background-color: darkblue;
+    color: white;
+}
+
+input{
+    outline-color: red;
+}
+img{
+    border-radius: 50%;
+    border: 1px solid #1312128a;
+    padding: 10px;
+
+}
+/* input[type="radio"]{
+    accent-color: rgb(48,131,59);
+} */
+input#calcio{
+    accent-color: rgb(48, 131,220);
+}
+input#tennis{
+    accent-color: rgb(200, 131,39);
+}
+input#volley{
+    accent-color: rgb(8, 102,59);
+}
+section#mission{
+    height: 200px;
+    background-image: url('./gattino.jpg');
+    /* margin: 0; */
+    background-repeat: no-repeat;
+    /* padding-top: 15%;
+    padding-top: 80px; */
+    text-align: center;
+    background-attachment: fixed;
+    background-position: top;
+    background-size:cover;
+    /* background-color: black; */
+}
+section#mission h2{
+    padding: 80px;
+    font-size: 32px;
+}
+section#riferimenti{
+    margin: 2em auto;
+}
+section#riferimenti div{
+    border: 1px solid black;
+    padding: 1em;
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+form{
+    /* display: none; */
+    /* visibility: hidden; */
+    visibility: visible;
+}
