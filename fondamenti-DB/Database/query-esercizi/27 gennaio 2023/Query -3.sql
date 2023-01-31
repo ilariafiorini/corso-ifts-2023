@@ -23,5 +23,3 @@ WHERE (tipo_struttura = '2 stelle' OR tipo_struttura = '3 stelle' or tipo_strutt
 
 
 
-
-
