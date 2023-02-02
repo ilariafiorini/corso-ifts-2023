@@ -1,0 +1,211 @@
+*{
+
+    font-family: 'Roboto', sans-serif;
+}
+.ilaria {
+    visibility: hidden;
+    display: none;
+}
+#riferimenti{
+    border-bottom: 1px solid #999999;
+    overflow: auto;
+    padding: 5px 1em;
+}
+
+#rif-tel{
+    float: left;
+}
+
+#rif-wha{
+    float: right;
+}
+
+#menu-principale {
+    text-align: center;
+    padding-right: 5px;
+    background-color: #00979a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 1 3 black;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-shadow{
+    text-shadow: 2px 2px 2px #333333;
+}
+
+#position{
+    height: 300px;
+    position: relative;
+    display: none;
+}
+
+#position, #pos-rel, #pos-abs{
+    border: 1px solid black;
+}
+
+#position div:nth-child(1){
+    background-color: #ffa000;
+
+}
+#position div:nth-child(2){
+    background-color: #558b2f;
+
+}
+
+#position div{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+#pos-rel{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
+
+#pos-abs{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 1;
+}
+
+#motto {
+    min-height: 200px;
+    background-image: url(./sfondo2.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#motto h2{
+    color: white;
+    padding: 100px;
+    position: relative;
+    z-index: 1;
+    font-variant: small-caps;
+}
+
+.pellicola{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.451);
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+}
+.container{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+#gallery > div, #gallery1 > div{
+    background-image: url(./sfondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 80px;
+    border: 1px solid black;
+    margin: 5px;
+
+
+}
+
+#chat{
+    position: fixed;
+    right: 2em;
+    bottom: 3em;
+    color: lightseagreen;
+    background-color: rgb(250, 250, 240);
+    border-radius: 20%;
+    padding: 5px;
+    cursor: not-allowed;
+}
+
+table, td{
+    border: 1px solid black !important;
+    border-collapse: collapse;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+#servizi > div{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#gallery div:hover, #gallery1 div:hover{
+    animation-name: opacizza;
+    animation-duration: .5s;
+}
+
+@keyframes opacizza{
+    from {opacity: 1;}
+    100% {opacity: 0.4;}
+}
+
+@media screen and (min-width:576px) {
+    #motto h2{
+        text-decoration: overline;
+    }
+    #servizi{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #servizi > div{
+        max-width: 30%;
+    }
+    #servizi > div >p{
+        text-align:  justify;
+        margin: 8px 0px;
+    }
+
+    #gallery{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+    #gallery div{
+        width: 48%;
+    }
+    
+    #gallery1{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    #gallery1 div:nth-child(1){
+        grid-column: span 2;
+    }
+    #gallery1 div:nth-child(2), #gallery1 div:nth-child(3){
+        grid-row: span 2;
+    }
+    #gallery1 div:nth-child(7){
+        grid-column: span 3;
+    }
+    #news-primopiano p{
+        column-count: 4;
+        /* column-width: 200px; */
+        column-rule: 1px solid #333333;
+        text-align: justify;
+
+    }
+}
