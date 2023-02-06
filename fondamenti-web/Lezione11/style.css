@@ -1,0 +1,43 @@
+section#notizie {
+    background-color:transparent;
+}
+    section#notizie div{
+ 
+}
+section#notizie div:nth-child(1){
+    background-color: coral;
+}
+section#notizie div:nth-child(2){
+    background-color: rgb(185, 67, 63);
+}
+section#notizie div:nth-child(3){
+    background-color: rgb(145, 87, 63);
+    color: gainsboro;
+}
+section#notizie div:nth-child(4){
+    background-color: rgb(108, 19, 9);
+    color: gainsboro;
+}
+/* .row{
+    margin: 1em 0;
+} */
+
+/* #primo-piano div{
+    border: 1px black;
+} */
+
+/* #flexbox{
+    display: flex;
+    flex-direction: column;
+}
+*/
+#flexbox div{
+    min-width: 33%;
+}
+
+/*
+@media screen and (min-width:576px){
+    #flexbox{
+        flex-direction: row;
+    }
+} */

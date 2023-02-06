@@ -1,0 +1,20 @@
+#carouseiExampleIndicators, .carousel-item, .carousel-inner{
+    height: 350px;
+}
+#carouseiExampleIndicators, .carousel-item, img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+ul li{
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+}
+
+#castello-footer{
+    margin: auto ;
+}
