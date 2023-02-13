@@ -1,0 +1,14 @@
+#testata img{
+    margin: 20px auto;
+    max-width: 250px;
+    display: block;
+
+    
+}
+#immagine img{
+    margin: 20px auto;
+    max-width: 50%;
+    display: block;
+
+    
+}
