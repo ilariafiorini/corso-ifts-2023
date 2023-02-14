@@ -5,10 +5,45 @@
 
     
 }
-#immagine img{
+/* #immagine img{
     margin: 20px auto;
     max-width: 50%;
-    display: block;
+    display: block; */
 
     
+}
+#menu {
+    background-color: orange;
+    padding: 2px;
+    min-height: 55px;
+}
+#menu >ul {
+    text-align: center;
+       
+}
+
+#menu ul li{
+    min-height: 23px;
+    display: inline-block;
+    position: relative;
+    top: 16px;    
+}
+
+#menu ul li a{
+    color: black;
+    font-size: 13px;
+    text-decoration: none;    
+}
+
+
+#chi_siamo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#chi_siamo div{
+    width: 300px;
+    height: 300px;
+   
 }
