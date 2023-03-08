@@ -1,0 +1,2 @@
+Documentazione estesa di TypeScript: https://www.typescriptlang.org/docs;
+client Git alternativo a Tortoise: Sourcetree; https://alternativeto.net/software/sourcetree/?platform=linux;
