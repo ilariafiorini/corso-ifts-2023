@@ -1,0 +1,20 @@
+{
+    "name": "enaip/progetto_01",
+    "description": "Progetto di prova 1",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Enaip\\Progetto01\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ilaria",
+            "email": "ilaria@ilariafiorini.it"
+        }
+    ],
+    "require": {
+        "ramsey/uuid": "^4.7"
+    }
+}
