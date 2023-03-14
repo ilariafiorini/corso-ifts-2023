@@ -1,0 +1,3 @@
+sta delle lib php packagist: https://packagist.org/
+le best practice per PHP:   https://phptherightway.com/
+documentazone di Laravel: https://laravel.com/

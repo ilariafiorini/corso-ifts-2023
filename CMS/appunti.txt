@@ -1,0 +1,10 @@
+per aggiungere il font aggiornare il json in C:\xampp\htdocs\wordpress\wp-content\themes\twentytwentythree
+per aggiungerre il file del font C:\xampp\htdocs\wordpress\wp-content\themes\twentytwentythree\assets\fonts
+
+
+per aggiungere una mappa di google si scieglie il link di condivisione in google maps
+per integrare al meglio serve avere la chiave di googlemaps per poter integrare la  mappa con javascripts00
+Cerca su Google "api key google"
+Cerca su Google "google maps style wizzard"  per personalizzare lo stile della mappa
+
+in alternativa al blocco di html peesonalizzato con dentro l'iframe, posso metterci "<div id="gmap"></div>"
