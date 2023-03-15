@@ -1,0 +1,10 @@
+Documentazione estesa di TypeScript: https://www.typescriptlang.org/docs;
+client Git alternativo a Tortoise: Sourcetree; https://alternativeto.net/software/sourcetree/?platform=linux;
+• Creare un account su https://bitbucket.org/
+(opzionale)
+
+• Clonare il repository:
+https://bitbucket.org/enaip-ifts/ifts2023.git
+
+C:\> git clone
+https://bitbucket.org/enaip-ifts/ifts2023.git
