@@ -7,13 +7,17 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function test(Request $request){
-        $demo = [
-            'name'=> 'stefano',
-            'surname'=> 'Bianchini',
-            'active'=> true
+        // $demo = [
+        //     'name'=> 'stefano',
+        //     'surname'=> 'Bianchini',
+        //     'active'=> true
 
-        ];
-        //return response(json_encode($demo), 201,['Content-Type' => 'application/json'] );
-        return response()->json($demo);
+        // ];
+        // //return response(json_encode($demo), 201,['Content-Type' => 'application/json'] );
+        // return response()->json($demo);
+    
+    return response() ->json([
+        'value' => $request->input('user.username')
+    ]);
     }
 }
