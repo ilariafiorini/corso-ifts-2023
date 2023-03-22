@@ -1,0 +1,14 @@
+{
+  "name": "02_workspace",
+  "version": "1.0.0",
+  "description": "Corso IFTS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilaria Fiorini",
+  "license": "ISC",
+  "devDependencies": {
+  "lite-server": "^2.6.1"
+  }
+}
