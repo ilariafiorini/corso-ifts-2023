@@ -8,3 +8,9 @@ https://bitbucket.org/enaip-ifts/ifts2023.git
 
 C:\> git clone
 https://bitbucket.org/enaip-ifts/ifts2023.git
+
+Il sito che spiega le varie versioni di javascript che il compilatore tsc utilizza
+https://www.typescriptlang.org/tsconfig#target
+
+tutte le info per il tsconfig e il debugging
+https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
