@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 
 class UserController extends Controller
 {
-    public function create(Request $request) {
+    public function create(Request $request)
+    {
 
         //https://laravel.com/docs/10.x/validation
         $validator = Validator::make($request->all(), [
@@ -18,36 +20,62 @@ class UserController extends Controller
             'title' => ['max:255']
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'errors' => $validator->errors()
             ], 400);
         }
 
         //Qui dovrò agire su DB facendo un INSERT
+        $user = new User();
+        $user->username = $request->input('username');
+        $user->name = $request->input('name');
+        $user->surname = $request->input('surname');
+        $user->email = $request->input('email');
+        $user->title = $request->input('title');
+        $user->age = $request->input('age');
+        $user->save();
 
+        return response()->json($user,201);
 
     }
 
-    public function delete(Request $request, $id) {
+    public function delete(Request $request, $id)
+    {
         //DELETE http://localhost:8000/api/users/7
         //$id = 7
 
         //Operazione di DELETE su DB
+        //$user = User::find($id);
+        $user = User::where('id','=', $id)->firstOrFail();
+        $user->delete();
+
+        return response()->json(null,204);
     }
 
-    public function read(Request $request, $id) {
+    public function read(Request $request, $id)
+    {
         //GET http://localhost:8000/api/users/3
         //$id=3
 
         //Operazione di SELECT su DB
+        //$user = User::findOrFail($id);
+        $user = User::where('id', '=', $id)->firstOrFail();
+
+        return response()->json($user);
+
     }
 
-    public function readAll(Request $request) {
+    public function readAll(Request $request)
+    {
         //Operazione di SELECT su DB
+        //SELECT * FROM users 
+        $users = User::get();
+        return response()->json($users, 200);
     }
 
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         //PUT http://localhost:8000/api/users/22
         //$id=22     
 
@@ -60,7 +88,7 @@ class UserController extends Controller
             'title' => ['max:255']
         ]);
 
-        if($validator->fails()) {
+        if ($validator->fails()) {
             return response()->json([
                 'errors' => $validator->errors()
             ], 400);
