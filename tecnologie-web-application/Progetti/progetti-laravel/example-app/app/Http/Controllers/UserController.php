@@ -7,31 +7,67 @@ use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
+    public function create(Request $request) {
 
-   public function create(Request $request) {
-        //username VARCHAR(255)
-        //email VARCHAR(255)
-        //name VARCHAR(255)
-        //surname VARCHAR(255)
-        //age INTEGER
-        //title VARCHAR(255) DEFAULT NULL
-
-        $validator = Validator::make(
-            $request->all(),
-            [
-                'username' => 'required|max:255',
-                'email' => ['required', 'max:255', 'email'],
-                'name' => ['required', 'max:255'],
-                'surname' => 'required|max:255',
-                'age' => ['required', 'integer', 'max:130', 'min:18'],
-                'title' => 'max:255'
-            ]
-        );
+        //https://laravel.com/docs/10.x/validation
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'max:255'],
+            'surname' => ['required', 'max:255'],
+            'email' => ['required', 'max:255', 'email'],
+            'age' => ['required', 'integer'],
+            'title' => ['max:255']
+        ]);
 
         if($validator->fails()) {
             return response()->json([
                 'errors' => $validator->errors()
             ], 400);
         }
-   }
+
+        //Qui dovrò agire su DB facendo un INSERT
+
+
+    }
+
+    public function delete(Request $request, $id) {
+        //DELETE http://localhost:8000/api/users/7
+        //$id = 7
+
+        //Operazione di DELETE su DB
+    }
+
+    public function read(Request $request, $id) {
+        //GET http://localhost:8000/api/users/3
+        //$id=3
+
+        //Operazione di SELECT su DB
+    }
+
+    public function readAll(Request $request) {
+        //Operazione di SELECT su DB
+    }
+
+    public function update(Request $request, $id) {
+        //PUT http://localhost:8000/api/users/22
+        //$id=22     
+
+        //https://laravel.com/docs/10.x/validation
+        $validator = Validator::make($request->all(), [
+            'name' => ['required', 'max:255'],
+            'surname' => ['required', 'max:255'],
+            'email' => ['required', 'max:255', 'email'],
+            'age' => ['required', 'integer'],
+            'title' => ['max:255']
+        ]);
+
+        if($validator->fails()) {
+            return response()->json([
+                'errors' => $validator->errors()
+            ], 400);
+        }
+
+        //Ora eseguo la UPDATE su database
+
+
+    }
 }
