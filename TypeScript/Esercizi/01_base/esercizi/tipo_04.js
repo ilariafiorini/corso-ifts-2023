@@ -1,0 +1,35 @@
+/**
+ *   - tipo-04.ts
+ *
+ * Definisci un tipo di dato per rappresentare un numero di telefono.
+ * L'input dovrebbe essere una stringa con il formato "xxx-xxx-xxxx",
+ * dove "x" rappresenta un cifra numerica. Crea una funzione che accetta
+ * un numero di telefono come parametro e restituisce true se il formato
+ * è corretto e false altrimenti.
+ */
+console.log("=====[ tipo-04.ts ]=====");
+function validaTelefonoOld(telefono) {
+    if (telefono.length === 12 && telefono.substring(3, 4) === "-"
+        && telefono.substring(7, 8) === "-" && (telefono.substring(0, 3)).match("[0-9]{3}")
+        && (telefono.substring(4, 7)).match("[0-9]{3}")
+        && (telefono.substring(8, 12)).match("[0-9]{4}")) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function validaTelefono(telefono) {
+    if (telefono.length === 12 && telefono.match("[0-9]{3}-[0-9]{3}-[0-9]{4}")) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+var telefono1 = "123-456-7890"; //true
+var telefono2 = "12A-456-7890"; //false
+var telefono3 = "123-45B-7890"; //false
+console.log(validaTelefono(telefono1));
+console.log(validaTelefono(telefono2));
+console.log(validaTelefono(telefono3));
