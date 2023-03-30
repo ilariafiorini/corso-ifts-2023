@@ -13,6 +13,7 @@ class UserController extends Controller
 
         //https://laravel.com/docs/10.x/validation
         $validator = Validator::make($request->all(), [
+            'username' => ['required', 'max:255'],
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
             'email' => ['required', 'max:255', 'email'],
@@ -32,11 +33,11 @@ class UserController extends Controller
         $user->name = $request->input('name');
         $user->surname = $request->input('surname');
         $user->email = $request->input('email');
-        $user->title = $request->input('title');
         $user->age = $request->input('age');
+        $user->title = $request->input('title');
         $user->save();
 
-        return response()->json($user,201);
+        return response()->json($user, 201);
 
     }
 
@@ -46,11 +47,11 @@ class UserController extends Controller
         //$id = 7
 
         //Operazione di DELETE su DB
-        //$user = User::find($id);
-        $user = User::where('id','=', $id)->firstOrFail();
+
+        $user = User::where('id', '=', $id)->firstOrFail();
         $user->delete();
 
-        return response()->json(null,204);
+        return response()->json(null, 204);
     }
 
     public function read(Request $request, $id)
@@ -81,6 +82,7 @@ class UserController extends Controller
 
         //https://laravel.com/docs/10.x/validation
         $validator = Validator::make($request->all(), [
+            'username' => ['required', 'max:255'],
             'name' => ['required', 'max:255'],
             'surname' => ['required', 'max:255'],
             'email' => ['required', 'max:255', 'email'],
@@ -95,7 +97,25 @@ class UserController extends Controller
         }
 
         //Ora eseguo la UPDATE su database
+        $user = User::where('id', '=', $id)->firstOrFail();
+        $user->username = $request->input('username');
+        $user->name = $request->input('name');
+        $user->surname = $request->input('surname');
+        $user->email = $request->input('email');
+        $user->age = $request->input('age');
+        $user->title = $request->input('title');
+        $user->save();
 
+        return response()->json($user, 200);
 
     }
+
+    // public function doNothing()
+    // {
+    //     //Operazione di SELECT su DB
+    //     //SELECT * FROM users 
+    //     //$nothing = User::get();
+    //     return response()->json(null, 419);
+    // }
+
 }
