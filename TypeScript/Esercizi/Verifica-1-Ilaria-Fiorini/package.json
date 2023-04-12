@@ -1,0 +1,14 @@
+{
+  "name": "verifica-1-ilaria-fiorini",
+  "version": "1.0.0",
+  "description": "verifica Typescript del 12/04/23",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilaria Fiorini",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
