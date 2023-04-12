@@ -3,6 +3,8 @@
 use App\Http\Controllers\DoNothingController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\VerificationController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -44,3 +46,28 @@ Route::get('/reviews/{id}', [ReviewController::class, 'read']);
 Route::get('/reviews', [ReviewController::class, 'readAll']);
 //PUT http://localhost:8000/api/reviews/22
 Route::put('/reviews/{id}', [ReviewController::class, 'update']);
+
+
+//POST http://localhost:8000/api/cars
+Route::post('/cars', [CarController::class, 'create']);
+//DELETE http://localhost:8000/api/cars/7 
+Route::delete('/cars/{id}', [CarController::class, 'delete']);
+//GET http://localhost:8000/api/cars/3
+Route::get('/cars/{id}', [CarController::class, 'read']);
+//GET http://localhost:8000/api/cars
+Route::get('/cars', [CarController::class, 'readAll']);
+//PUT http://localhost:8000/api/cars/22
+Route::put('/cars/{id}', [CarController::class, 'update']);
+
+
+
+//POST http://localhost:8000/api/verifications
+Route::post('/verifications', [VerificationController::class, 'create']);
+//DELETE http://localhost:8000/api/verifications/7 
+Route::delete('/verifications/{id}', [VerificationController::class, 'delete']);
+//GET http://localhost:8000/api/verifications/3
+Route::get('/verifications/{id}', [VerificationController::class, 'read']);
+//GET http://localhost:8000/api/verifications
+Route::get('/verifications', [VerificationController::class, 'readAll']);
+//PUT http://localhost:8000/api/verifications/22
+Route::put('/verifications/{id}', [VerificationController::class, 'update']);
