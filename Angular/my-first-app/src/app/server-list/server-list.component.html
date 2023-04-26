@@ -1,0 +1,28 @@
+<label>Server name:</label>
+<input
+ type="text"
+ class="form-control"
+ [(ngModel)]="serverName"
+>
+<p>{{ serverName }}</p>
+
+
+<button class="btn btn-primary"
+        [style]="'background-color: ' + buttonColor + ';'"
+        [disabled]="!allowNewServer"
+        (click)="onCreateServer()"
+        (mouseover)="onMouseOver()"
+        (mouseout)="onMouseOut()"
+>Add Server: {{ allowNewServer }}</button>
+
+<p>{{ serverCreationStatus }}</p>
+
+<p>Elenco Server:</p>
+
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
