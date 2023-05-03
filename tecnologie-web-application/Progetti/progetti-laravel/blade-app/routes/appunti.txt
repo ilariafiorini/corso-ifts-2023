@@ -1,3 +1,9 @@
 csrf token (direttiva blade) https://it.wikipedia.org/wiki/Cross-site_request_forgery
 
 doc laravel e laravel blade https://laravel.com/docs/10.x/readme
+
+Temi bootstrap
+
+https://bootswatch.com/
+https://bootstrapmade.com/
+https://adminlte.io/
