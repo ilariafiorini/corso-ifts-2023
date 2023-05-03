@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nuovo hotel</title>
+    <title>Modifica hotel</title>
     @include('bootstrap')    
 </head>
 <body>
     <div class="container">
 
-        <h1>Inserisci nuovo hotel</h1>
+        <h1>Aggiorna i dati dell'hotel</h1>
 
-        <form method="post" action="">
+        <form method="post" action="/hotels/modify/{{ $hotel->id }}">
             @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Nome hotel</label>
-            <input type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'hotel" value="{{old('name')}}" name="name">
+            <input type="text" class="form-control" id="name" placeholder="Inserisci il nome dell'hotel" value="{{ old('name', $hotel->name) }}" name="name">
         </div>
         <div class="mb-3">
             <label for="stars" class="form-label">Stelle</label>
-            <input type="text" class="form-control" id="stars" placeholder="Inserisci le stelle" value="{{old('stars')}}" name="stars">
+            <input type="text" class="form-control" id="stars" placeholder="Inserisci le stelle" value="{{ old('stars', $hotel->stars) }}" name="stars">
         </div>
         <div class="mb-3">
             <label for="address" class="form-label">Indirizzo</label>
-            <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo dell'hotel" value="{{old('address')}}"  name="address">
+            <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo dell'hotel" value="{{ old('address', $hotel->address) }}" name="address">
         </div>
 
         <a href="/hotels" class="btn btn-secondary">Indietro</a>
@@ -44,7 +44,6 @@
             ci sono errori di vlidazione
         @endif
     </div>
-
     @include('footer')
 </body>
 </html>

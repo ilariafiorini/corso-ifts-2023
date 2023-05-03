@@ -30,11 +30,21 @@ Route::get('/hotels/delete/{id}', [
 ]);
 
 Route::get('/hotels/create', [
-        \App\Http\Controllers\HotelController::class,
+    \App\Http\Controllers\HotelController::class,
     'create'
 ]);
 
 Route::post('/hotels/create', [
-        \App\Http\Controllers\HotelController::class,
+    \App\Http\Controllers\HotelController::class,
     'save'
+]);
+
+Route::get('/hotels/modify/{id}', [
+        \App\Http\Controllers\HotelController::class,
+    'modify'
+]);
+
+Route::post('/hotels/modify/{id}', [
+    \App\Http\Controllers\HotelController::class,
+'update'
 ]);
