@@ -41,10 +41,10 @@ Route::post('/hotels/create', [
 
 Route::get('/hotels/modify/{id}', [
         \App\Http\Controllers\HotelController::class,
-    'modify'
+    'edit'
 ]);
 
 Route::post('/hotels/modify/{id}', [
     \App\Http\Controllers\HotelController::class,
-'update'
+    'update'
 ]);

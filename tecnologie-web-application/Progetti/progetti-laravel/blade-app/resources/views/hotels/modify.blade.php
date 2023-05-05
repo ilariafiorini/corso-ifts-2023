@@ -27,6 +27,13 @@
             <input type="text" class="form-control" id="address" placeholder="Inserisci l'indirizzo dell'hotel" value="{{ old('address', $hotel->address) }}" name="address">
         </div>
 
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" @checked(old('all_year', $hotel->all_year)) id="all_year" name="all_year">
+            <label class="form-check-label" for="all_year">
+              Aperto tutto l'anno
+            </label>
+        </div>
+
         <a href="/hotels" class="btn btn-secondary">Indietro</a>
 
         <button type="submit" class="btn btn-primary">Salva</button>

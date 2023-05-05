@@ -8,11 +8,13 @@
     @include('bootstrap')    
 </head>
 <body>
+<div class="container">
 
-<h3>Hotel modificato con successo</h3>
-
-<a href="/hotels">Torna alla lista degli hotel</a>
-
-@include('footer')
+    <h3>Hotel creato con successo</h3>
+    
+    <a href="/hotels">Torna alla lista degli hotel</a>
+    
+</div>
+    @include('footer')
 </body>
 </html>

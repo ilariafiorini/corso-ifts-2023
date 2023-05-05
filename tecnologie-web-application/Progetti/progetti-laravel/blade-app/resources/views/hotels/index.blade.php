@@ -11,7 +11,7 @@
     <div class="container">
 
 
-        <h1>Elenco hotels</h1>
+        <h1>{{__('hotel_list')}}</h1>
 
         <a href="/hotels/create">Inserisci nuovo hotel</a>
 
@@ -21,6 +21,7 @@
                     <th>Nome</th>
                     <th>Stelle</th>
                     <th>Indirizzo</th>
+                    <th>Aperto tutto l'anno</th>
                     <th>Azioni</th>
                 </tr>
             </thead>
@@ -30,6 +31,13 @@
                         <td>{{$hotel->name}}</td>
                         <td>{{$hotel->stars}}</td>
                         <td>{{$hotel->address}}</td>
+                        <td>
+                            @if($hotel->all_year)
+                                <p class="text-success">Si</p>
+                            @else
+                                <p class="text-danger">No</p>
+                            @endif
+                        </td>
                         <td>
                             <a href="/hotels/modify/{{$hotel->id}}">Modifica</a>
                             <a href="/hotels/delete/{{$hotel->id}}">Elimina</a>
