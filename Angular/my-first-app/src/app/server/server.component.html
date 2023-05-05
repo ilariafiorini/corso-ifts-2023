@@ -1,2 +1,26 @@
-<p>{{ 'Server' }} with ID {{ serverId }} is {{ getServerStatus() }}</p>
-<!-- <p>Server with ID {{ serverId }} is {{ getServerStatus() }}</p> -->
+<div class="row m-2" [ngStyle]="{ backgroundColor: getColor() }"
+   [ngClass]="{ online: serverStatus === 'online', offline: serverStatus === 'offline' }">
+  <label class="col-10">
+    {{ serverName }} with ID {{ serverId }} is {{ getServerStatus() }}
+  </label>
+
+  <button class="col-1 btn btn-primary"
+    (click)="onReboot()"
+    [disabled]="serverStatus === 'booting'">
+    <i class="fa-solid fa-arrows-rotate"></i>
+  </button>
+  <button class="col-1 btn btn-primary"
+    (click)="onRemove()"
+    [disabled]="serverStatus === 'booting'">
+    <i class="fa-regular fa-trash-can"></i>
+  </button>
+</div>
+
+<!--
+
+  1. aggiungere un pulsante nel server per effettuare il riavvio
+    1.1. inserire il pulsante nel template del server
+    1.2. intercettare l'evento (click) del pulsante: chiamando onReboot()
+    1.3. nella onReboot() modificare lo stato del server
+
+-->

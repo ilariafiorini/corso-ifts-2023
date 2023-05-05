@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IServer, ServerStatus } from '../server.model';
 
 @Component({
   selector: '[app-server-list]',
@@ -10,6 +11,13 @@ export class ServerListComponent {
   serverCreationStatus = 'No server created';
   buttonColor = 'blue';
   serverName = '';
+  serverWasCreated: boolean = false;
+
+  serverList: IServer[] = [
+    { name: 'Server 1', id: 10, status: ServerStatus.ONLINE },
+    { name: 'Server 2', id: 20, status: ServerStatus.ONLINE },
+    { name: 'Server 3', id: 30, status: ServerStatus.OFFLINE },
+  ];
 
   constructor() {
     setTimeout(() => {
@@ -20,6 +28,14 @@ export class ServerListComponent {
   onCreateServer() {
     console.log('ServerListComponent.onCreateServer()');
     this.serverCreationStatus = 'Server created!';
+    this.serverWasCreated = true;
+
+    const newServer: IServer = {
+      name: this.serverName,
+      id: Math.floor(Math.random() * 1000) + 1,
+      status: Math.random() > 0.5 ? ServerStatus.ONLINE : ServerStatus.OFFLINE,
+    };
+    this.serverList.push(newServer);
   }
 
   onMouseOver() {
@@ -40,4 +56,16 @@ export class ServerListComponent {
     this.serverName = (event.target as HTMLInputElement).value;
   }
   */
+
+  onServerRemoved(name: string) {
+    console.log('ServerListComponent.onServerRemoved(): ' + name);
+
+    for (let i = 0; i < this.serverList.length; i++) {
+      const server = this.serverList[i];
+      if (server.name == name) {
+        this.serverList.splice(i, 1);
+        break;
+      }
+    }
+  }
 }

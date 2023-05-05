@@ -7,3 +7,8 @@ l'ingombro di ogni div della vosta pagina html, scrivete questo nella console:
 
 [].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)})
 
+elenco e spiegazione eventi:  https://developer.mozilla.org/en-US/docs/Web/Events
+
+                            : https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+
+

@@ -15,14 +15,33 @@
         (mouseout)="onMouseOut()"
 >Add Server: {{ allowNewServer }}</button>
 
-<p>{{ serverCreationStatus }}</p>
+<!-- p>{{ serverCreationStatus }}</p -->
+
+<p *ngIf="serverWasCreated">
+  A new server was created with
+  name: {{ serverName }}
+</p>
+<p *ngIf="!serverWasCreated">
+  No server created
+</p>
 
 <p>Elenco Server:</p>
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of serverList; index as i"
+    [serverName]="server.name"
+    [serverId]="server.id"
+    [serverStatus]="server.status"
+    (removed)="onServerRemoved($event)"
+>
+</app-server>
+
+
+<!--
+<ul *ngIf="true">
+  <li *ngFor="let i of [ 1, 2, 4]"> {{ i }} </li>
+</ul>
+
+<ng-container *ngIf="true">
+  <div *ngFor="let i of [ 1, 2, 4]"> {{ i }} </div>
+</ng-container>
+-->
