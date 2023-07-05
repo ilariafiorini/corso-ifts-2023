@@ -12,3 +12,28 @@ elenco e spiegazione eventi:  https://developer.mozilla.org/en-US/docs/Web/Event
                             : https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
 
 
+esempio per la gestione della retituzione della promise a null: [if (x != null) {...]
+        this.hotelList = x;
+
+import { Component } from '@angular/core';
+import { Hotel } from '../hotel.model';
+import { HotelService } from '../hotel.service';
+
+@Component({
+  selector: 'app-hotel-list',
+  templateUrl: './hotel-list.component.html',
+  styleUrls: ['./hotel-list.component.css'],
+})
+export class HotelListComponent {
+  hotelList: Hotel[] = [];
+
+  constructor(private hotelService: HotelService) {
+    this.hotelService.getHotelList().then((x) => {
+      if (x != null) {
+        this.hotelList = x;
+      }
+    });
+  }
+}
+
+
