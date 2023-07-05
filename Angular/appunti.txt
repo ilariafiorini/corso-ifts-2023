@@ -13,7 +13,6 @@ elenco e spiegazione eventi:  https://developer.mozilla.org/en-US/docs/Web/Event
 
 
 esempio per la gestione della retituzione della promise a null: [if (x != null) {...]
-        this.hotelList = x;
 
 import { Component } from '@angular/core';
 import { Hotel } from '../hotel.model';
@@ -36,4 +35,10 @@ export class HotelListComponent {
   }
 }
 
+N.B bisogna continuare a gestire il null nel jhtml del component 
 
+<div *ngIf="hotel != null">
+  <img [src]="hotel.image">
+  <h3>{{hotel.name}} ({{hotel.stars}} stelle)</h3>
+  <p>Indirizzo: {{hotel.address}}</p>
+</div>
